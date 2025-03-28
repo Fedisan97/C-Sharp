@@ -9,7 +9,7 @@ public class Solution {
             xor ^= num;
         }
         
-       
+        
         int diffBit = xor & -xor;
         
         int num1 = 0, num2 = 0;
