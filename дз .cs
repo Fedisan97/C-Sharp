@@ -8,13 +8,7 @@ public class Program
         int[] result1 = SingleNumber(nums1);
         Console.WriteLine($"[{result1[0]}, {result1[1]}]"); // [3, 5]
 
-        int[] nums2 = {-1, 0};
-        int[] result2 = SingleNumber(nums2);
-        Console.WriteLine($"[{result2[0]}, {result2[1]}]"); // [-1, 0]
-
-        int[] nums3 = {0, 1};
-        int[] result3 = SingleNumber(nums3);
-        Console.WriteLine($"[{result3[0]}, {result3[1]}]"); // [0, 1]
+      
     }
 
     public static int[] SingleNumber(int[] nums)
