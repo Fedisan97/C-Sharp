@@ -1,41 +1,29 @@
 using System;
 
-public class Program
-{
-    public static void Main()
-    {
-        int[] nums1 = { 1, 2, 8, 3, 2, 5 };
-        int[] result1 = SingleNumber(nums1);
-        Console.WriteLine($"[{result1[0]}, {result1[1]}]"); // [3, 5]
-
-
-    }
-
-    public static int[] SingleNumber(int[] nums)
-    {
-        // XOR всех чисел
-        int xor = 0;
-        foreach (int num in nums)
-        {
-            xor ^= num;
+public class Solution {
+    public int[] SingleNumber(int[] nums) {
+        // Получаем XOR всех элементов (это будет a ^ b)
+        int xorResult = 0;
+        foreach (int num in nums) {
+            xorResult ^= num;
         }
-    
-        int diffBit = xor & -xor;
 
-        int num1 = 0, num2 = 0;
+        // Находим любой установленный бит в xorResult (возьмём самый младший)
+        int diffBit = 1;
+        while ((xorResult & diffBit) == 0) {
+            diffBit <<= 1;
+        }
 
-        foreach (int num in nums)
-        {
-            if ((num & diffBit) != 0)
-            {
-                num1 ^= num;
-            }
-            else
-            {
-                num2 ^= num;
+        // Разделяем числа на две группы и находим a и b
+        int a = 0, b = 0;
+        foreach (int num in nums) {
+            if ((num & diffBit) != 0) {
+                a ^= num;
+            } else {
+                b ^= num;
             }
         }
 
-        return new[] { num1, num2 };
+        return new int[] { a, b };
     }
 }
