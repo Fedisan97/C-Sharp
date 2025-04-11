@@ -1,7 +1,5 @@
 
 
-// переделать, ошибки есть 
-
 using System;
 using System.Collections.Generic;
 
