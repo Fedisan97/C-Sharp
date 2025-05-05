@@ -1,7 +1,7 @@
 using System;
 
 
-//он не сделан до конца
+
 
 
 abstract class Transport
