@@ -41,7 +41,7 @@ class Car : Transport
     public override void Stop()
     {
         base.Stop();
-        Console.WriteLine("Скрип! Машина остановилась");
+        Console.WriteLine("Скрип Машина остановилась");
     }
 }
 class Truck : Transport
@@ -86,9 +86,9 @@ class Bicycle : Transport
     public void RingBell()
     {
         if (HasBell)
-            Console.WriteLine("Дзинь-дзинь!");
+            Console.WriteLine("Дзинь дзинь");
         else
-            Console.WriteLine("Нет звонка!");
+            Console.WriteLine("Нет звонка");
     }
 }
 class Program
