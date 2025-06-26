@@ -7,7 +7,7 @@ class Program
 
         int[] nums = { 5, 2, 8, 6, 2, 5 };
 
-
+ 
         int[] result = SingleNumber(nums);
 
 
